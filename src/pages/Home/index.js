@@ -13,7 +13,12 @@ import Modal from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
 const Page = () => {
-  const {last} = useData()
+  const { data } = useData();
+  let last = null;
+  if (data && data.events) {
+    last = data.events[data.events.length - 1];
+  };
+  // récupère les données à partir de useData() et utilise la propriété data.events pour obtenir les informations sur le dernier évènement 
   return <>
     <header>
       <Menu />
@@ -157,4 +162,4 @@ const Page = () => {
   </>
 }
 
-export default Page;
+export default Page; 
