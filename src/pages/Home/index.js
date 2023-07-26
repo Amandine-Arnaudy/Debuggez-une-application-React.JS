@@ -123,8 +123,8 @@ const Page = () => {
         <h3>Notre derniére prestation</h3>
         {last &&
           <EventCard
-            imageSrc={last?.cover}
-            title={last?.title}
+            imageSrc={last?.cover !== undefined ? last.cover : ""}
+            title={last?.title !== undefined ? last.cover : ""}
             date={new Date(last?.date)}
             small
             label="boom"
