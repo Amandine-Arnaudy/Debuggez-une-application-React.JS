@@ -124,7 +124,7 @@ const Page = () => {
         {last &&
           <EventCard
             imageSrc={last?.cover !== undefined ? last.cover : ""}
-            title={last?.title !== undefined ? last.cover : ""}
+            title={last?.title !== undefined ? last.title : ""}
             date={new Date(last?.date)}
             small
             label="boom"
